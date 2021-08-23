@@ -11,6 +11,7 @@
     min-height: 100vh;
 }
 
+
 .header {
     position: relative;
     left: 0;
@@ -21,10 +22,12 @@
     align-items: center;
     padding: 30px 100px;
     font-variant: small-caps;
+    background-color: rgb(53, 52, 52);
+    opacity: 0.8;
+    z-index: 10;
 }
 
 .header h1 {
-    /* text-decoration: none; */
 }
 
 .header h1 a {
@@ -54,6 +57,7 @@
 
 .icons {
     margin-left: 40px;
+    background-color: none;
 }
 
 .group ul li a:hover {
@@ -62,6 +66,12 @@
 
 .icons li {
     font-size: 1.25em;
+    background-color: none;
+
+}
+
+.group, .icons li a, .icons, header h1, .group ul li a, .header h1 a, .group ul li {
+    background-color: rgb(53, 52, 52);
 }
 
 .cellscontainer {
@@ -71,14 +81,14 @@
 }
 
 .cells {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.025;
-    background-color: rgb(65, 64, 64);
+    opacity: 0.2;
+    /* background-color: rgb(65, 64, 64); */
     transform: scaleY(-1);
 }
 
@@ -101,27 +111,84 @@
     margin: 0;
     padding: 0;
     z-index: 10;
-    background: none;
+    background-color: transparent;
 }
 
 .text {
     font-size: 1.5em;
-    background: none;
+    background-color: transparent;
+}
+
+.text h2 {
+    background-color: transparent;
 }
 
 .text p {
     margin-top: 20px;
+    background-color: transparent;
 }
 
 .social {
     display: flex;
     font-size: 2.2em;
     padding-top: 200px;
-    background: none;
+    background-color: transparent;
 }
 
 .social a {
-    margin-right: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-color: transparent;
+}
+
+
+@media (max-width: 700px) {
+    /* For mobile phones: */
+    .group .navigation,
+    .group .icons {
+        display: block;
+    }
+    .header {
+        display: grid;
+        padding: 30px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .header h1 {
+        display: grid;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .group {
+        display: grid;
+    }
+    .group ul li a {
+        display: grid;
+        padding: 2px;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .icons {
+        margin-left: 0;
+        padding-top: 5px;
+    }
+    .textsocial {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7em;
+        left: 0;
+        padding-top: 60px;
+    }
+    .social {
+        justify-content: center;
+        align-items: center;
+        padding-top: 70px;
+    }
 }
 
 /* PORTFOLIO */
@@ -137,8 +204,9 @@
     display: flex;
     height: 300px;
     width: 500px;
-    margin: 45px;
-    border: 20px solid black;
+    min-width: 500px;
+    margin: 45px 45px 10px 45px;
+    border: 7px solid black;
 }
 
 .box img {
@@ -151,12 +219,122 @@
     object-fit: cover;
 }
 
+.link {
+    display: grid;
+    padding-bottom: 30px;
+    margin-left: 45px;
+}
+
+@media (max-width: 700px) {
+    /* For mobile phones: */
+    .showcase {
+        padding: 0 80px;
+    }
+    .box {
+        height: 180px;
+        width: 300px;
+        min-width: 300px;   
+    }
+}
+
+
+
+/* PORTFOLIO - DA NANG */
+
+.danangtext h2 {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.danangtext p {
+    padding: 20px;
+}
+
+.danangtext img {
+    position: relative;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: 40px;
+    background: rgba(163, 161, 161, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(163, 161, 161, 0.22);
+}
+
+
+
+/* PORTFOLIO - GALLERY */
+
+.gallerytext h2 {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.gallerytext p {
+    padding: 20px;
+}
+
+.gallerytext img {
+    position: relative;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 40px;
+    background: rgba(163, 161, 161, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(163, 161, 161, 0.22);
+}
+
+
+/* PORTFOLIO - MUSIC */
+
+.musictext h2 {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.musictext p {
+    padding: 20px;
+}
+
+.musictext ul {
+    padding-left: 40px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.musictext img {
+    position: relative;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: 40px;
+    background: rgba(163, 161, 161, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(163, 161, 161, 0.22);
+}
+
+
 
 /* CONTACT */
 
 .content {
     display: flex;
     justify-content: space-around;
+    padding-top: 50px;
 }
 
 .contactdetails  {
@@ -164,17 +342,24 @@
     flex-direction: column;
     box-sizing: border-box;
     width: 400px;
+    height: 270px;
     align-items: center;
-    padding-top: 100px;
+    padding: 25px;
+    background: rgba(163, 161, 161, 0.2);
+    border-radius: 16px;
+    border: 1px solid rgba(163, 161, 161, 0.22);
+    z-index: 10;
 }
 
-.contactdetails h3 {
-    padding-bottom: 20px;
-}
-
-.contactdetails p {
+.contactdetails p,
+.contactdetails a {
     padding-bottom: 5px;
     padding-top: 5px;
+    margin: 5px;
+    background: rgba(163, 161, 161, 0.2);
+    background-color: transparent;
+    z-index: 50;
+    text-align: center;
 }
 
 /* CONTACTFORM */
@@ -214,3 +399,36 @@
     background-color: #000000;
     padding: 20px;
   } 
+
+
+@media (max-width: 900px) {
+    /* For tablets: */
+    .contactdetails {
+        width: 200px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 700px) {
+    /* For tablets: */
+    .content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactdetails {
+        padding-bottom: 50px;
+        margin-top: -40px;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+    }
+    .contactform, input[type=text], select, textarea {
+        width: 250px;
+    }
+    .contactform {
+        padding-top: 50px;
+        padding-left: 0;
+        background-color: transparent;
+    }
+}
