@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>InterCell | Contact</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Contact</h1>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>        
+            <ul class="icons">
+                <li><a href="#"><ion-icon name="search"></ion-icon></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="contactdetails">
+            <p>Tel: +33 0766315614</p>
+            <p>Email: robd88@hotmail.co.uk</p>
+            <p>GitHub: <a href="https://github.com/Rob-InterCell">https://github.com/Rob-InterCell</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/robdawe/">https://www.linkedin.com/in/robdawe/</a></p>
+        </div>
+        <div class="contactform">
+            <form action="POST" data-netlify="true">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                  <option value="select">---Select---</option>
+                  <option value="australia">Australia</option>
+                  <option value="belgium">Belgium</option>
+                  <option value="brazil">Brazil</option>
+                  <option value="canada">Canada</option>
+                  <option value="china">China</option>
+                  <option value="france">France</option>
+                  <option value="germany">Germany</option>
+                  <option value="greece">Greece</option>
+                  <option value="ireland">Ireland</option>
+                  <option value="india">India</option>
+                  <option value="italy">Italy</option>
+                  <option value="japan">Japan</option>
+                  <option value="netherlands">Netherlands</option>
+                  <option value="portugal">Portugal</option>
+                  <option value="southkorea">South Korea</option>
+                  <option value="spain">Spain</option>
+                  <option value="uk">UK</option>
+                  <option value="usa">USA</option>
+                  <option value="vietnam">Vietnam</option>
+                  <option value="other">---Other---</option>
+                </select>
+            
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                <div class="spam">
+                    <div data-netlify-recaptcha="true"></div>
+                </div>
+
+                <input type="submit" value="Submit">
+            
+              </form>
+        </div>
+    </div>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
